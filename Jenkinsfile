@@ -1,16 +1,15 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
+    agent {
+        docker {
+            image 'node:12-alpine' 
+            args '-p 3000:3000' 
+        }
     }
-
-  }
-  stages {
-    stage('Docker build') {
-      steps {
-        sh 'docker build -t nodeinfo .'
-      }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'npm install' 
+            }
+        }
     }
-
-  }
 }
