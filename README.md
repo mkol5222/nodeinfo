@@ -6,7 +6,6 @@
 
 | Env variable        | Description           | Note  |
 | ------------- |-------------| -----|
-| 
 | DB_ENDPOINT      | Postgres hostname | |
 | DB_USERNAME | Postgres account username | |
 | DB_PASSWORD| Postgres account password | |
