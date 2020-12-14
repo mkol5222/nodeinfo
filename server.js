@@ -46,6 +46,7 @@ app.get('/', async (req, res) => {
 
   fs.readFile("/etc/hostname", "utf8", (err, data) => {
     const resObj = {
+      t: Date.now(),
       "Hostname": data,
       "Platform": os.platform(),
       "Arch": os.arch(),
