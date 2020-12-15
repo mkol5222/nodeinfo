@@ -46,6 +46,7 @@ app.get('/', async (req, res) => {
 
   fs.readFile("/etc/hostname", "utf8", (err, data) => {
     const resObj = {
+      project: "Hello CnC8",
       env: process.env,
       t: Date.now(),
       "Hostname": data,
